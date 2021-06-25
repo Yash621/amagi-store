@@ -1,5 +1,6 @@
 import { StarIcon } from "@heroicons/react/solid";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
 
 function CheckoutProduct({
   id,
@@ -11,6 +12,11 @@ function CheckoutProduct({
   rating,
   hasPrime,
 }) {
+  const dispatch = useDispatch();
+  const removeItemFromBasket = () => {
+    dispatch(removeFromBasket({ id }));
+  };
+
   return (
     <div className="grid grid-cols-5">
       <Image src={image} height={200} width={200} objectFit="contain" />
@@ -39,7 +45,9 @@ function CheckoutProduct({
         )}
       </div>
 
-      <button className="button h-9 mt-10">Remove from Cart</button>
+      <button onClick={removeItemFromBasket} className="button h-9 mt-10">
+        Remove from Cart
+      </button>
     </div>
   );
 }
