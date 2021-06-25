@@ -12,7 +12,7 @@ function Header() {
         <div className="h-10 w-5"></div>
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
-            src="https://links.papareact.com/f90"
+            src="https://www.amagi.com/images/logo-blue.svg"
             width={120}
             height={40}
             objectFit="contained"
