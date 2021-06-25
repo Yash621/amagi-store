@@ -4,19 +4,25 @@ import {
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
+import { signIn, signOut, useSession } from "next-auth/client";
+import { useRouter } from "next/router";
 
 function Header() {
+  const [session] = useSession();
+  const router = useRouter();
+
   return (
     <header>
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
         <div className="h-10 w-5"></div>
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
+            onClick={() => router.push("/")}
             src="https://www.amagi.com/images/logo-blue.svg"
             width={120}
             height={40}
             objectFit="contained"
-            className="cursor-pointer"
+            className="cursor-pointer "
           />
         </div>
         <div className="h-10 w-5"></div>
@@ -29,15 +35,18 @@ function Header() {
         </div>
         <div className="h-10 w-5"></div>
         <div className="text-white flex items-center text-xs space-x-6 mx-6">
-          <div className=" link">
-            <p>Hello Yash</p>
+          <div onClick={!session ? signIn : signOut} className=" link">
+            <p>{session ? `Hello, ${session.user.name}` : "Sign In"}</p>
             <p className="font-extrabold">Account & Lists</p>
           </div>
           <div className="link">
             <p>Returns</p>
             <p className="font-extrabold">& Orders</p>
           </div>
-          <div className=" link relative flex items-center">
+          <div
+            onClick={() => router.push("/checkout")}
+            className=" link relative flex items-center"
+          >
             <span className="absolute top-0 right-0 md:right-6 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
               0
             </span>
@@ -53,7 +62,7 @@ function Header() {
         <MenuIcon className="h-6 mr-1 " />
         <p className="mr-3 link">All </p>
         <p className="mr-3 link">Prime Video </p>
-        <p className="mr-3 link">Amazon Business </p>
+        <p className="mr-3 link">Amagi Business </p>
         <p className="mr-3 link">Today's Details </p>
         <p className="mr-3 link">Electronics </p>
         <p className="mr-3 link">Food & Grocery </p>
