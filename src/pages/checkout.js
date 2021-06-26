@@ -40,13 +40,13 @@ function Checkout() {
           </div>
         </div>
         <div className="flex flex-col bg-white p-10 shadow-md">
-          {items.length > 0 && (
+          {items.length >= 0 && (
             <>
               <h2 className="whitespace-nowrap">
-                Subtotal ({items.length} items):
+                Subtotal ({items.length ? items.length : 0} items):
                 <span className="font-bold">
                   {" "}
-                  ₹{Math.floor(totalPrice)}
+                  ₹{totalPrice ? Math.floor(totalPrice) : 0}
                 </span>
               </h2>
               <button
