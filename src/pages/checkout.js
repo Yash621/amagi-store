@@ -1,11 +1,13 @@
 import Header from "../components/Header";
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import { selectItems } from "../slices/basketSlice";
+import { selectItems, selectTotal } from "../slices/basketSlice";
 import CheckoutProduct from "../components/CheckoutProduct";
+import { session } from "next-auth/client";
 
 function Checkout() {
   const items = useSelector(selectItems);
+  const totalPrice = useSelector(selectTotal);
 
   return (
     <div className="bg-gray-100">
@@ -20,9 +22,7 @@ function Checkout() {
           />
           <div className="flex flex-col p-5 space-y-10 bg-white">
             <h1 className="text-3xl border-b pb-4">
-              {!items.length
-                ? "Your Amazon Basket is Empty"
-                : "Shopping Basket"}
+              {!items.length ? "Your Amagi Basket is Empty" : "Shopping Basket"}
             </h1>
             {items.map((item, i) => (
               <CheckoutProduct
@@ -38,6 +38,27 @@ function Checkout() {
               />
             ))}
           </div>
+        </div>
+        <div className="flex flex-col bg-white p-10 shadow-md">
+          {items.length > 0 && (
+            <>
+              <h2 className="whitespace-nowrap">
+                Subtotal ({items.length} items):
+                <span className="font-bold">
+                  {" "}
+                  ₹{Math.floor(totalPrice)}
+                </span>
+              </h2>
+              <button
+                className={`button mt-2 ${
+                  !session &&
+                  "from-gray 300 to-gray-200 text-gray-300 cursor-not-allowed"
+                }`}
+              >
+                {!session ? "Sign in to checkout" : "Proceed to checkout"}
+              </button>
+            </>
+          )}
         </div>
       </main>
     </div>

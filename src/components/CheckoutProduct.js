@@ -1,6 +1,7 @@
 import { StarIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
+import { removeFromBasket } from "../slices/basketSlice";
 
 function CheckoutProduct({
   id,
