@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "amagi-store",
+  "private_key_id": "695f21d5a013788f6aba6df71fec5295e1ec1870",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCrSQ50tftlYMic\nOgGu56KqldnqvAbmu21eWmBXWzpu4iNtNdRCr5XRemPuV0xBd0Tjrs7QMUNW6eKg\njznjKjj0JtdJ9fbRuOn9X74ouKcf9fejlSpi0Ouhrv7TAmxpJS4J8hFKIh7YKp/A\nGK6BN9eMbtxOeyIVfnZ2mbQP6J3s8WPFC6atl7sPEQbK+/f1c9UIQWHsTBXinXo1\nuOYAcuM45UeH8DoHhVFvFb20+hFzalUXp6jSdbtOYmZNJ9OFeBBoGcqQZuU/4dgL\npswuW6oU4Mp7VrZS1g2AEjVj3uvE7wihcWrqt2VPZrcVVun3x1FwaRJ+mJaCvdlG\ncrSCH+c3AgMBAAECggEAC3/PnHlH4+ylUIu6Z4jTNxBGvYdwZSwpxwmv6cgiT6XB\n9XKFihE/WygULmumSceH6fXnROXnHJ4ozK5g7LB90LJiMMEhGBUJ1yyxgmAHOaeU\nlQ24zJffFznoOg1cbuCuoGn5IYN8k6Gk8PYXPRidJtHzMMJRLaU8WcZZkYSEmbls\n3VVby+8WAQSTsuIT8t60PZppSvhVs28A5HpjBXTuCBgnAaNA4LanYxTNWSULrjsp\n0IhRoKf7IcMojRMvvJI2ipxdJKC0n98w4PuFtNtLu2Ng9EnHUMUyE0W3FuyTFb8R\nYTCUw8pRcv5PJfebcW2VeANirBK28s5Xv+fBd3+9vQKBgQDaDC5PRdqbRc8wO1gC\nO8DwZnn1jg4JzJRrfz4mMQJhInNs/aVRwPrvv8LzF2qt/52B0CG5bCuwGtG6VHfz\nKCjmHesXhb5bYxx5mgXNhcBxtHOuytgr8xLAs0AUqe2jo77bs0oqVgEHtLK9KHos\n2/OfuHrGUgNg7RaOVz9JC6WnrQKBgQDJGTvEOyq8nXqLlWdrYt6hn/dpatdrh/Kj\nPQEMNwx2HqhJ5bG8qyYJkiSPBMtgbhjyXgrWaTYlv47yYUJMO3zkKzvpakN1TK3l\nf49dG6fIZodyEsNlMQ9Tj50cX7MBQyEyC5FQj1XQkUgVzHfN6YGBbga24FlWMg35\nfczFbfh28wKBgQC9s2VC0Jo9BoIYCzkpUEUuoWkvqnQqMFNcJqqyXWcdjPRw+Uew\nFb37gZEhHtlQIhgtTR9aC3MC1oJqonxtDx5t/c9/ens/VL38SXUM9nWUNxOCGbXy\nnppNDmYM1D4MZTRyPcyjgomI47uxeBq7Fm0hI0WlbsrDs+Ew21USvtBTTQKBgQCU\nrHcnSKb782FaOQbQubPmwiFkan0BHu0gCkXwBfLMkTXSDGMvHUlt4gHtSpohnMQM\ny8IvanGBzvGb+JPPUFuxRNVyaAGfgyU9euU+7OdKnaKdj4muEmtGV/LLu2TYFg1A\ntpSkfpPvMrmchCI+tdftHK8SHSNvOmpifcMaY4dCSQKBgF4inJOJpdnh4IvbdY6d\nC5iw/+O+9cwGi5tFZSBhiSdWQms9jfvbSZp9j6fi9OqBWIaj7v4tT9kdAxK9m3kD\nkMzajvzjjIWZXa3LIcS3JLydAzpgmesvrFwHGQrd+FkehNVleCnL0WJS922eV7bV\nt2etOrEemcrRr1WsGbZe2Wri\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-avlll@amagi-store.iam.gserviceaccount.com",
+  "client_id": "114665046402761474650",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-avlll%40amagi-store.iam.gserviceaccount.com"
+}
