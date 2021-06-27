@@ -36,7 +36,7 @@ export default async (req, res) => {
     const payload = requestBuffer.toString();
     const sig = req.headers["stripe-signature"];
     let event;
-
+    // verifying if the event came frrom stripe
     try {
       event = stripe.webhooks.constructEvent(payload, sig, endpointSecret);
     } catch (err) {
