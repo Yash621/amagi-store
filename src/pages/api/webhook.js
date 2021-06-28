@@ -3,8 +3,20 @@ import * as admin from "firebase-admin";
 
 const serviceAccount = require("../../../permissions.json");
 
+const app = !admin.apps.length
+  ? admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+    })
+  : admin.app();
+
+const stripe = require("stripe")(
+  "sk_test_51J6iO2SEAkhsly7VI8TZRI8V607ZC9s8KA6sZ9N0vQS5Fg0tBvVroJEYTMo6WnbqqBy6AuawxEOFBhtp39fFwweO00gDRjf7ut"
+);
+const endpointSecret = "whsec_K8cWwAevHIip9q1UYvCV68iwXOw5mm4U";
+
 const fulfillOrder = async (session) => {
-  return app.firestore
+  return app
+    .firestore()
     .collection("users")
     .doc(session.metadata.email)
     .collection("orders")
@@ -20,16 +32,6 @@ const fulfillOrder = async (session) => {
     });
 };
 
-const app = !admin.apps.length
-  ? admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-    })
-  : admin.app();
-
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-
-const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
-
 export default async (req, res) => {
   if (req.method === "POST") {
     const requestBuffer = await buffer(req);
@@ -43,7 +45,6 @@ export default async (req, res) => {
       console.log("ERROR", err.message);
       return res.status(400).send(`webhook error:${err.message}`);
     }
-
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
       return fulfillOrder(session)
