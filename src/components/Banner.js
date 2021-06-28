@@ -18,15 +18,6 @@ function Banner() {
         </div>
 
         <div>
-          <img
-            loading="lazy"
-            src="https://c.ndtvimg.com/2020-06/secjl0go_hrithik_625x300_03_June_20.jpg?downsize=360:*"
-            alt=""
-            className="object-contain h-40"
-          />
-          <h1>I LOVE U MY PRINCESS</h1>
-        </div>
-        <div>
           <img loading="lazy" src="https://links.papareact.com/6ff" alt="" />
         </div>
         <div>
