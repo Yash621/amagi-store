@@ -1,6 +1,8 @@
 const stripe = require("stripe")(
   "sk_test_51J6iO2SEAkhsly7VI8TZRI8V607ZC9s8KA6sZ9N0vQS5Fg0tBvVroJEYTMo6WnbqqBy6AuawxEOFBhtp39fFwweO00gDRjf7ut"
 );
+
+// stripe checkout session
 export default async (req, res) => {
   const { items, email } = req.body;
   const transformedItems = items.map((item) => ({
